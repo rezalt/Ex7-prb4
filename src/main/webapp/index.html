@@ -16,6 +16,7 @@
 <body ng-app="myApp" ng-controller="PersonController as ctrl">
     <p>Test your filter, directive and factory here</p>
     <login-form></login-form>
+    <div>{{ctrl.testPerson | myFilter}}</div>
     <div>{{ctrl.titleCase("my example service")}}</div>
     <div>{{ctrl.camelCase("myexample Service")}}</div>
     <div>{{ctrl.dashCase("my example service")}}</div>

@@ -6,7 +6,7 @@ app.factory('PersonFactory', function ()
 {
 
     var persons = [
-        {firstname: 'John', lastnamne: 'Arne'},
+        {firstname: 'John', lastname: 'Arne'},
         {firstname: 'Long', lastname: 'Johnson'}
     ];
 
@@ -51,7 +51,8 @@ app.controller('PersonController', ['PersonFactory', function (PersonFactory) {
         var self = this;
 
         self.persons = PersonFactory.getPersons();
-
+        self.testPerson = self.persons[0];
+        
         self.titleCase = function (name) {
             return PersonFactory.toTitleCase(name);
         };
